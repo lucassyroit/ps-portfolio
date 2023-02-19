@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-toggler {
+    border-color: rgb(0, 0, 0);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.8em;
+}
+  
+.footer-left, .footer-right {
+    width: 20%;
+    text-align: center;
+}
+  
+.footer-middle {
+    width: 60%;
+    text-align: center;
+}
+   
+.footer-left a, .footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+.footer-left a:hover, .footer-right a:hover {
+    color: #f2f2f2;
+}
+  
+.fa-arrow-up {
+    font-size: 20px;
+}
