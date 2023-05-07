@@ -62,7 +62,7 @@
             <h5 class="card-title text-center">Smart Quiz</h5>
             <p class="card-text text-center"></p>
             <div class="d-flex justify-content-center pt-4">
-              <a href="#smartquiz" class="btn btn-primary">Meer informatie?</a>
+              <button type="button" class="btn btn-primary" onclick="toggleVisibility('smartquiz')">Meer informatie?</button>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@
             <h5 class="card-title text-center">Camerabewaking systeem</h5>
             <p class="card-text text-center"></p>
             <div class="d-flex justify-content-center pt-4">
-              <a href="#camera" class="btn btn-primary">Meer informatie?</a>
+              <button type="button" class="btn btn-primary" onclick="toggleVisibility('camera')">Meer informatie?</button>
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
             <h5 class="card-title text-center">Hosting</h5>
             <p class="card-text text-center"></p>
             <div class="d-flex justify-content-center pt-4">
-              <a href="#hosting" class="btn btn-primary">Meer informatie?</a>
+              <button type="button" class="btn btn-primary" onclick="toggleVisibility('hosting')">Meer informatie?</button>
             </div>
           </div>
         </div>
@@ -92,18 +92,21 @@
             <h5 class="card-title text-center">Energie Monitoring</h5>
             <p class="card-text text-center"></p>
             <div class="d-flex justify-content-center pt-4">
-              <a href="#energie" class="btn btn-primary">Meer informatie?</a>
+              <button type="button" class="btn btn-primary" onclick="toggleVisibility('energie')">Meer informatie?</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="smartquiz">
-        <h2 class="pt-3 pt-lg-2" id="smartquiz">Smart Quiz</h2>
+      <div class="smartquiz hide" id="smartquiz">
+        <h2 class="pt-3 pt-lg-2">Smart Quiz</h2>
+        <h3>Opdrachtsomschrijving</h3>
         <p>De smart quiz was een opdracht van het opleidingsonderdeel "Systems Engineering & Analysis". Voor de quiz moesten we vooral de tijdroving van de verbeteringen 
           op papier wegwerken. Het fysieke toestel moest een draagbaar systeem zijn dat overal werkt en makkelijk in opzet is. Wij hebben hieraan gewerkt met een groep van
           3 studenten.
         </p>
+        <h3>Bijgeleerd</h3>
 
+        <h3>Bijdrage</h3>
         <p>Ikzelf heb me vooral bezig gehouden met de front-end, maar ook de communicatie tussen de website voor het personeel en de database, dit is gebeurd in PHP.
           De receptie, jury en de quizmaster hebben een gemeenschappelijke website gekregen waar functies in zaten om de quiz op een gemakkelijke manier te laten verlopen.
         </p>
@@ -131,10 +134,11 @@
             </li>
           </ul>
         </p>
+        <p>Als je geïnteresseerd bent in het bekijken van de code van het project, kun je deze vinden op mijn <a href="https://github.com/lucassyroit/smart-quiz">GitHub</a>.</p>
       </div>
 
-      <div class="camera">
-        <h2 class="pt-3 pt-lg-2" id="camera">Camerabewaking systeem</h2>
+      <div class="camera hide" id="camera">
+        <h2 class="pt-3 pt-lg-2">Camerabewaking systeem</h2>
         <p>Het camerabewaking systeem was een opdracht van het opleidingsonderdeel "Orientation Project 2". In het project moesten we het systeem ontwerpen, implementeren
           en onderhouden. We moesten zorgen voor een netwerk infrastructuur, deze ook installeren en beheren. We moesten voor het systeem ook soft- en hardware implementeren.
           In onze opstelling was een firebox, switch, server en interne en externe camera's aanwezig. 
@@ -144,13 +148,13 @@
         </p>
       </div>
 
-      <div class="hosting">
-        <h2 class="pt-3 pt-lg-2" id="hosting">Hosting</h2>
+      <div class="hosting hide" id="hosting">
+        <h2 class="pt-3 pt-lg-2">Hosting</h2>
         <p>Voor het opleidingsonderdeel "Project Hosting" maken we hosting. Aan dit project zijn we momenteel nog bezig.</p>
       </div>
 
-      <div class="energie">
-        <h2 class="pt-3 pt-lg-2" id="energie">Energie Monitoring</h2>
+      <div class="energie hide" id="energie">
+        <h2 class="pt-3 pt-lg-2">Energie Monitoring</h2>
         <p>Voor het opleidingsonderdeel "IoT Advanced" hebben we een project gemaakt rondom energie monitoring. Het doel van het project was om gegevens uit drie verschillende meters te halen.
           De digtale meter, de analoge meter en de pulse meter. De digitale meter werd uitgelezen door een P1 Kabel. De analoge meter via een camera en de pulse meter werd gesimuleerd. De data werd
         gestuurd met MQQT naar een listener en zo doorgestuurt naar de database. De data werd weergegeven op een dashboard met behulp van Grafana.</p>
@@ -164,9 +168,30 @@
   <footer class="bg-dark text-light py-3">
     <div class="container d-flex justify-content-between align-items-center">
       <a href="#" class="text-light"><i class="fas fa-arrow-up me-2"></i></a>
-      <a href="mailto:r0851337@student.thomasmore.be" class="btn btn-primary">Contact Me</a>
+      <a href="mailto:r0851337@student.thomasmore.be" class="btn btn-primary">Contacteer Mij</a>
     </div>
-  </footer> 
+  </footer>
+  
+  <script>
+		function toggleVisibility(elementId) {
+			var elements = document.getElementsByClassName("hide");
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].id === elementId) {
+					elements[i].style.display = elements[i].style.display === "none" ? "block" : "none";
+				} else {
+					elements[i].style.display = "none";
+				}
+			}
+		}
+		// hide all the elements with class "hide" when the page loads
+		window.onload = function() {
+			var elements = document.getElementsByClassName("hide");
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].style.display = "none";
+			}
+		}
+	</script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
