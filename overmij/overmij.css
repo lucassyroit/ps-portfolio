@@ -32,3 +32,8 @@ footer {
 .bgc-h-f {
     background-color: #1d3251;
 }
+
+.btn-groen:hover {
+    background-color: #cdedda;
+    color: #000;
+}

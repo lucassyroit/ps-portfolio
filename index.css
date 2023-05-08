@@ -25,7 +25,7 @@ body {
     color: black;
     margin-top: 0.5%;
 }
-  
+ 
 .fa-arrow-up {
     font-size: 20px;
 }
@@ -40,4 +40,9 @@ body {
 
 .bgc-h-f {
     background-color: #1d3251;
+}
+
+.btn-groen:hover {
+    background-color: #cdedda;
+    color: #000;
 }
