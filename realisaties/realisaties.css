@@ -3,3 +3,19 @@
 body {
     font-family: 'Lato', sans-serif;
 }
+
+.groen {
+    color: #cdedda;
+}
+
+.btn-groen {
+    background-color: #cdedda;
+}
+
+.bgc-h-f {
+    background-color: #1d3251;
+}
+
+.fa-arrow-up {
+    font-size: 20px;
+}
