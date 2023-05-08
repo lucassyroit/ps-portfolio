@@ -37,3 +37,7 @@ footer {
     background-color: #cdedda;
     color: #000;
 }
+
+.bold {
+    font-weight: bold;
+}
